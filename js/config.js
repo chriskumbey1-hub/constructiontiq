@@ -1,23 +1,18 @@
 // ═══════════════════════════════════════════════════════
 //  ConstructIQ — Configuration
-//
-//  AFTER deploying the Cloudflare Worker:
-//  Replace AI_PROXY_URL with your worker URL.
-//  You do NOT put your API key here anymore — it lives
-//  safely inside the Cloudflare Worker environment variable.
+//  Your Firebase config is already filled in below.
+//  Only change ANTHROPIC_API_KEY.
 // ═══════════════════════════════════════════════════════
 
 const CONFIG = {
 
-  // ── AI Proxy URL ─────────────────────────────────────
-  // Paste your Cloudflare Worker URL here, e.g.:
-  // "https://constructiq-ai.yourname.workers.dev"
-  AI_PROXY_URL : "https://constructiq-ai.chriskumbey1.workers.dev/",
+  // ── Anthropic Claude AI ──────────────────────────────
+  // Get your key at: https://console.anthropic.com/
+  ANTHROPIC_API_KEY : "sk-ant-REPLACE_WITH_YOUR_KEY",
+  MODEL             : "claude-sonnet-4-20250514",
+  MAX_TOKENS        : 1000,
 
-  MODEL      : "claude-sonnet-4-20250514",
-  MAX_TOKENS : 1000,
-
-  // ── Firebase (your project — already filled in) ──────
+  // ── Firebase (your project) ──────────────────────────
   FIREBASE: {
     apiKey            : "AIzaSyAmJyvXMb1xjt4UBUgYtND5n1ZjIZprYK8",
     authDomain        : "constructiq-3fd35.firebaseapp.com",
