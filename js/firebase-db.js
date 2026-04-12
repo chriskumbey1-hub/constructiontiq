@@ -77,3 +77,8 @@ function dbListen(colName, callback) {
     showStatus("Database error — see console", "error");
   });
 }
+
+// Helper: get all project names as map for dropdowns
+function getProjectsMap() {
+  return _projects || {};
+}

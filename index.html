@@ -3,34 +3,29 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <meta name="description" content="ConstructIQ — Ghana's premier building management platform. Professional plans, cost estimation, AI insights, and real-time project tracking."/>
   <title>ConstructIQ — Professional Building Management</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Satoshi:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
 <div id="status-bar"></div>
 
-<!-- ══════════ NAVBAR ══════════ -->
+<!-- ══ NAVBAR ══ -->
 <header class="navbar" id="navbar">
   <div class="nav-inner">
     <div class="nav-brand" onclick="switchTab('home',document.querySelector('[data-tab=home]'))">
-      <div class="brand-logo">
-        <svg viewBox="0 0 36 36" fill="none"><path d="M18 3L33 14V33H23V23H13V33H3V14L18 3Z" fill="url(#lg1)"/><defs><linearGradient id="lg1" x1="3" y1="3" x2="33" y2="33"><stop stop-color="#C9943A"/><stop offset="1" stop-color="#F0C060"/></linearGradient></defs></svg>
-      </div>
-      <div class="brand-text">
-        <span class="brand-name">ConstructIQ</span>
-        <span class="brand-sub">Building Excellence</span>
-      </div>
+      <svg class="brand-icon" viewBox="0 0 36 36" fill="none"><path d="M18 3L33 14V33H23V23H13V33H3V14L18 3Z" fill="url(#ng)"/><defs><linearGradient id="ng" x1="3" y1="3" x2="33" y2="33"><stop stop-color="#C9943A"/><stop offset="1" stop-color="#F0C060"/></linearGradient></defs></svg>
+      <div><span class="brand-name">ConstructIQ</span><span class="brand-sub">Building Excellence</span></div>
     </div>
-    <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
     <nav class="nav-links" id="nav-links">
       <button class="nav-btn active" data-tab="home"      onclick="switchTab('home',this)">Home</button>
       <button class="nav-btn"        data-tab="plans"     onclick="switchTab('plans',this)">Plans</button>
       <button class="nav-btn"        data-tab="estimator" onclick="switchTab('estimator',this)">Estimator</button>
+      <button class="nav-btn"        data-tab="projects"  onclick="switchTab('projects',this)">My Projects</button>
       <button class="nav-btn"        data-tab="expenses"  onclick="switchTab('expenses',this)">Expenses</button>
       <button class="nav-btn"        data-tab="report"    onclick="switchTab('report',this)">Report</button>
       <button class="nav-btn"        data-tab="paint"     onclick="switchTab('paint',this)">Paint Studio</button>
@@ -39,233 +34,141 @@
 </header>
 
 
-<!-- ══════════ HOME ══════════ -->
+<!-- ══ HOME ══ -->
 <main class="page active" id="page-home">
-
-  <!-- HERO -->
   <section class="hero">
-    <div class="hero-media">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=85&auto=format&fit=crop" alt="Modern luxury home exterior" class="hero-img" loading="eager"/>
-      <div class="hero-vignette"></div>
-    </div>
+    <div class="hero-bg"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=85&auto=format&fit=crop" alt="Modern home"/><div class="hero-veil"></div></div>
     <div class="hero-content">
       <div class="hero-pill">🇬🇭 Ghana's #1 Construction Platform</div>
       <h1 class="hero-title">Build with <em>Vision.</em><br>Manage with <em>Precision.</em></h1>
-      <p class="hero-body">ConstructIQ brings together professional architectural plans, AI-powered cost estimation, real-time expense tracking, and a Pinterest-inspired paint studio — everything your construction project needs, in one platform.</p>
+      <p class="hero-body">ConstructIQ is a comprehensive building management system purpose-built for the Ghanaian construction industry. Plan, budget, track, and execute every stage of your project with professional confidence.</p>
       <div class="hero-cta">
         <button class="btn-gold" onclick="switchTab('plans',document.querySelector('[data-tab=plans]'))">Explore Building Plans</button>
-        <button class="btn-outline-white" onclick="switchTab('estimator',document.querySelector('[data-tab=estimator]'))">Get a Cost Estimate</button>
+        <button class="btn-outline" onclick="switchTab('estimator',document.querySelector('[data-tab=estimator]'))">Get a Cost Estimate</button>
       </div>
-      <div class="hero-trust">
-        <div class="trust-item"><span class="trust-num">6</span><span class="trust-txt">Plan Types</span></div>
-        <div class="trust-div"></div>
-        <div class="trust-item"><span class="trust-num">AI</span><span class="trust-txt">Powered</span></div>
-        <div class="trust-div"></div>
-        <div class="trust-item"><span class="trust-num">Live</span><span class="trust-txt">Firebase DB</span></div>
+      <div class="hero-stats">
+        <div class="hstat"><span class="hstat-n">6</span><span class="hstat-l">Plan Types</span></div>
+        <div class="hstat-div"></div>
+        <div class="hstat"><span class="hstat-n">AI</span><span class="hstat-l">Powered</span></div>
+        <div class="hstat-div"></div>
+        <div class="hstat"><span class="hstat-n">Multi</span><span class="hstat-l">Project</span></div>
       </div>
-    </div>
-    <div class="hero-scroll-hint">
-      <span>Scroll to explore</span>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </div>
   </section>
 
-  <!-- ABOUT STRIP -->
-  <section class="about-strip">
-    <div class="about-strip-inner">
-      <div class="about-badge">About ConstructIQ</div>
-      <p class="about-text">ConstructIQ is a comprehensive digital platform built specifically for the Ghanaian property development and construction industry. Whether you are a first-time homeowner building your dream bungalow in Kumasi, a developer managing multiple residential projects in East Legon, or a commercial investor in Tema — ConstructIQ gives you the professional tools to plan, budget, track, and execute with confidence. Every feature is calibrated to Ghana's climate, construction standards, and market rates.</p>
+  <section class="about-band">
+    <div class="about-inner">
+      <div class="eyebrow-center">About ConstructIQ</div>
+      <p class="about-text">ConstructIQ is designed for Ghanaian property developers, homeowners, architects, and contractors. Whether you are building a modest bungalow in Kumasi or managing a commercial development in Tema, our platform delivers professional-grade tools calibrated to Ghana's market rates, climate, and construction standards — all in one place, accessible from any device via Firebase cloud sync.</p>
     </div>
   </section>
 
-  <!-- FEATURES BENTO GRID -->
-  <section class="bento-section">
-    <div class="bento-header">
-      <div class="eyebrow">Everything in One Place</div>
-      <h2 class="bento-title">Professional Tools for<br>Every Stage of Your Build</h2>
-    </div>
+  <section class="features-bento">
+    <div class="bento-hd"><div class="eyebrow-center">Everything You Need</div><h2 class="bento-title">Professional Tools for Every Stage</h2></div>
     <div class="bento-grid">
-
-      <!-- Large card: Plans -->
-      <div class="bento-card bento-large" onclick="switchTab('plans',document.querySelector('[data-tab=plans]'))">
-        <div class="bento-img-wrap">
-          <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=900&q=80&auto=format&fit=crop" alt="Luxury house exterior" loading="lazy"/>
-          <div class="bento-img-overlay"></div>
-        </div>
-        <div class="bento-content">
-          <div class="bento-icon">🏠</div>
-          <h3 class="bento-card-title">Professional Building Plans</h3>
-          <p class="bento-card-desc">Six architect-designed plans from compact starter bungalows to grand executive mansions. Each plan includes realistic 3D-style visualisations, full specifications, and AI-generated expert analysis.</p>
-          <span class="bento-link">Browse Plans →</span>
-        </div>
+      <div class="bcard bcard-lg" onclick="switchTab('plans',document.querySelector('[data-tab=plans]'))">
+        <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&q=80&auto=format&fit=crop" alt="Ghanaian home"/>
+        <div class="bcard-overlay"></div>
+        <div class="bcard-body"><div class="bcard-icon">🏠</div><h3>Building Plans</h3><p>Six architect-designed plans from compact bungalows to executive mansions — with realistic Ghanaian building photos and AI expert analysis.</p><span class="bcard-link">Browse Plans →</span></div>
       </div>
-
-      <!-- Tall card: Estimator -->
-      <div class="bento-card bento-tall" onclick="switchTab('estimator',document.querySelector('[data-tab=estimator]'))">
-        <div class="bento-img-wrap">
-          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80&auto=format&fit=crop" alt="Construction site workers" loading="lazy"/>
-          <div class="bento-img-overlay"></div>
-        </div>
-        <div class="bento-content">
-          <div class="bento-icon">📊</div>
-          <h3 class="bento-card-title">Cost Estimator</h3>
-          <p class="bento-card-desc">Instant, detailed cost breakdowns in GH₵ — foundation, structure, roofing, electrical, plumbing, finishing, and labour. Adjust quality and location for accurate local rates.</p>
-          <span class="bento-link">Estimate Now →</span>
-        </div>
+      <div class="bcard bcard-tall" onclick="switchTab('estimator',document.querySelector('[data-tab=estimator]'))">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80&auto=format&fit=crop" alt="Construction"/>
+        <div class="bcard-overlay"></div>
+        <div class="bcard-body"><div class="bcard-icon">📊</div><h3>Cost Estimator</h3><p>Instant itemised cost breakdowns in GH₵. Save estimates as named projects and track expenses per project.</p><span class="bcard-link">Estimate →</span></div>
       </div>
-
-      <!-- Small: Expenses -->
-      <div class="bento-card bento-small" onclick="switchTab('expenses',document.querySelector('[data-tab=expenses]'))">
-        <div class="bento-icon-lg">💰</div>
-        <h3 class="bento-card-title">Expense Tracker</h3>
-        <p class="bento-card-desc">Record every cedis in real time. Categorise, filter, and chart your construction spend. Synced to Firebase — accessible from any device.</p>
-        <span class="bento-link">Track Expenses →</span>
+      <div class="bcard bcard-sm" onclick="switchTab('projects',document.querySelector('[data-tab=projects]'))">
+        <div class="bcard-icon-lg">📁</div><h3>My Projects</h3><p>Save multiple construction projects. Track budget vs actual spend. Switch between projects seamlessly.</p><span class="bcard-link">View Projects →</span>
       </div>
-
-      <!-- Small: Paint -->
-      <div class="bento-card bento-small paint-bento" onclick="switchTab('paint',document.querySelector('[data-tab=paint]'))">
-        <div class="bento-img-wrap">
-          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80&auto=format&fit=crop" alt="Beautiful interior design" loading="lazy"/>
-          <div class="bento-img-overlay dark"></div>
-        </div>
-        <div class="bento-content">
-          <div class="bento-icon">🎨</div>
-          <h3 class="bento-card-title">Paint Studio</h3>
-          <p class="bento-card-desc">Pinterest-inspired colour boards, live room visualiser, colour matching, and AI paint advice.</p>
-          <span class="bento-link">Open Studio →</span>
-        </div>
+      <div class="bcard bcard-sm has-img" onclick="switchTab('paint',document.querySelector('[data-tab=paint]'))">
+        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80&auto=format&fit=crop" alt="Interior"/>
+        <div class="bcard-overlay dark"></div>
+        <div class="bcard-body"><div class="bcard-icon">🎨</div><h3>Paint Studio</h3><p>Pinterest-inspired colour boards with realistic room photos and AI colour advice.</p><span class="bcard-link">Open Studio →</span></div>
       </div>
-
-      <!-- Wide: Report + AI -->
-      <div class="bento-card bento-wide ai-bento">
-        <div class="bento-ai-glow"></div>
-        <div class="bento-content">
-          <div class="bento-icon ai-icon-anim">✦</div>
-          <h3 class="bento-card-title">Powered by Claude AI</h3>
-          <p class="bento-card-desc">Every plan comes with an AI-generated architectural analysis. Get professional paint advice tailored to Ghana's tropical climate, intelligent colour harmony, and expert construction insights — all powered by Anthropic's Claude.</p>
-          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;">
-            <button class="btn-gold-sm" onclick="switchTab('plans',document.querySelector('[data-tab=plans]'))">Try AI Plans</button>
-            <button class="btn-ghost-sm" onclick="switchTab('paint',document.querySelector('[data-tab=paint]'))">AI Paint Advice</button>
-          </div>
-        </div>
+      <div class="bcard bcard-ai">
+        <div class="bcard-ai-glow"></div>
+        <div class="bcard-body no-img"><div class="ai-pulse">✦</div><h3>Claude AI</h3><p>Expert architectural analysis, professional paint advice tailored to Ghana's climate, and intelligent colour harmony — powered by Anthropic's Claude AI.</p>
+        <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;"><button class="btn-gold-sm" onclick="switchTab('plans',document.querySelector('[data-tab=plans]'))">Try AI Analysis</button></div></div>
       </div>
-
-      <!-- Report -->
-      <div class="bento-card bento-small" onclick="switchTab('report',document.querySelector('[data-tab=report]'))">
-        <div class="bento-icon-lg">📄</div>
-        <h3 class="bento-card-title">Project Reports</h3>
-        <p class="bento-card-desc">Professional, print-ready expense reports. Share with banks, investors, or contractors. One-click PDF export.</p>
-        <span class="bento-link">View Reports →</span>
+      <div class="bcard bcard-sm" onclick="switchTab('report',document.querySelector('[data-tab=report]'))">
+        <div class="bcard-icon-lg">📄</div><h3>Reports</h3><p>Print-ready expense reports per project. Share with banks, investors, or contractors.</p><span class="bcard-link">View Reports →</span>
       </div>
-
     </div>
   </section>
 
-  <!-- PHOTO SHOWCASE -->
-  <section class="showcase-section">
-    <div class="showcase-header">
-      <div class="eyebrow">Visual Inspiration</div>
-      <h2 class="showcase-title">Homes Built with Vision</h2>
-      <p class="showcase-sub">From modest starter homes to grand executive residences — explore the possibilities that ConstructIQ helps you realise.</p>
-    </div>
+  <section class="showcase">
+    <div class="showcase-hd"><div class="eyebrow-center">Visual Inspiration</div><h2 class="showcase-title">Homes Built with Vision</h2><p class="showcase-sub">From modest starter homes to grand executive residences — discover what's possible.</p></div>
     <div class="showcase-grid">
-      <div class="showcase-item showcase-item-1">
-        <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&q=80&auto=format&fit=crop" alt="Modern Ghanaian home" loading="lazy"/>
-        <div class="showcase-caption">Executive Residence · East Legon Style</div>
-      </div>
-      <div class="showcase-item showcase-item-2">
-        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80&auto=format&fit=crop" alt="Family bungalow" loading="lazy"/>
-        <div class="showcase-caption">Family Bungalow · Tropical Modern</div>
-      </div>
-      <div class="showcase-item showcase-item-3">
-        <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&q=80&auto=format&fit=crop" alt="Luxury interior" loading="lazy"/>
-        <div class="showcase-caption">Luxury Interior · Open Plan Living</div>
-      </div>
-      <div class="showcase-item showcase-item-4">
-        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80&auto=format&fit=crop" alt="Modern villa" loading="lazy"/>
-        <div class="showcase-caption">Contemporary Villa · Pool & Garden</div>
-      </div>
+      <div class="sgitem s1"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80&auto=format&fit=crop" alt=""/><div class="sg-cap">Family Bungalow · Tropical Modern</div></div>
+      <div class="sgitem s2"><img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&q=80&auto=format&fit=crop" alt=""/><div class="sg-cap">Executive Residence · East Legon</div></div>
+      <div class="sgitem s3"><img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&q=80&auto=format&fit=crop" alt=""/><div class="sg-cap">Open Plan Interior · Luxury Finish</div></div>
+      <div class="sgitem s4"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80&auto=format&fit=crop" alt=""/><div class="sg-cap">Contemporary Villa · Pool &amp; Garden</div></div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="cta-bg"><img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&q=80&auto=format&fit=crop" alt="Construction" loading="lazy"/><div class="cta-overlay"></div></div>
-    <div class="cta-content">
-      <h2 class="cta-title">Ready to Build Your<br>Dream Home?</h2>
-      <p class="cta-body">Join property developers and homeowners across Ghana who trust ConstructIQ to manage their construction projects — from blueprint to completion.</p>
-      <button class="btn-gold" onclick="switchTab('plans',document.querySelector('[data-tab=plans]'))">Start with a Plan Today</button>
-    </div>
+  <section class="cta-band">
+    <div class="cta-bg"><img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&q=80&auto=format&fit=crop" alt=""/><div class="cta-veil"></div></div>
+    <div class="cta-body-wrap"><h2>Ready to Build Your Dream Home?</h2><p>Join property developers and homeowners across Ghana who trust ConstructIQ to manage their projects from blueprint to completion.</p><button class="btn-gold" onclick="switchTab('plans',document.querySelector('[data-tab=plans]'))">Start with a Plan</button></div>
   </section>
-
 </main>
 
 
-<!-- ══════════ PLANS ══════════ -->
+<!-- ══ PLANS ══ -->
 <main class="page" id="page-plans">
-  <div class="inner-page-hero">
-    <div class="inner-hero-bg">
-      <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1400&q=80&auto=format&fit=crop" alt="Modern architecture" loading="lazy"/>
-      <div class="inner-hero-overlay"></div>
-    </div>
-    <div class="inner-hero-text">
-      <div class="eyebrow">Architectural Plans</div>
-      <h1 class="inner-title">Choose Your Building Plan</h1>
-      <p class="inner-sub">Six architect-designed plans built for Ghana's climate, lifestyle, and construction standards. Each includes full specifications, realistic visualisations, and AI expert analysis.</p>
-    </div>
+  <div class="page-hero"><div class="ph-bg"><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1400&q=80&auto=format&fit=crop" alt=""/><div class="ph-veil"></div></div>
+    <div class="ph-text"><div class="eyebrow">Architectural Plans</div><h1>Choose Your Building Plan</h1><p>Six plans designed for Ghana's climate, lifestyle, and construction standards — with realistic building photos and AI expert analysis.</p></div>
   </div>
   <div class="plans-grid" id="plans-grid"></div>
-  <div id="plan-detail" style="display:none;padding:0 2rem 3rem;max-width:1100px;margin:0 auto;">
-    <div class="plan-detail-card" id="plan-detail-inner"></div>
-  </div>
+  <div id="plan-detail" style="display:none;padding:0 2rem 3rem;max-width:1100px;margin:0 auto;"><div id="plan-detail-inner"></div></div>
 </main>
 
 
-<!-- ══════════ ESTIMATOR ══════════ -->
+<!-- ══ ESTIMATOR ══ -->
 <main class="page" id="page-estimator">
-  <div class="inner-page-hero compact">
-    <div class="inner-hero-bg">
-      <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1400&q=80&auto=format&fit=crop" alt="Construction site" loading="lazy"/>
-      <div class="inner-hero-overlay"></div>
-    </div>
-    <div class="inner-hero-text">
-      <div class="eyebrow">Cost Estimator</div>
-      <h1 class="inner-title">Calculate Your Build Cost</h1>
-      <p class="inner-sub">Accurate, itemised cost estimates based on current Ghanaian material and labour market rates.</p>
-    </div>
+  <div class="page-hero compact"><div class="ph-bg"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1400&q=80&auto=format&fit=crop" alt=""/><div class="ph-veil"></div></div>
+    <div class="ph-text"><div class="eyebrow">Cost Estimator</div><h1>Calculate Your Build Cost</h1><p>Adjust parameters and watch costs update live. Save as a named project to track expenses.</p></div>
   </div>
-  <div class="content-wrap">
-    <div class="estimator-layout">
-      <div class="card glass-card">
-        <div class="card-label">Project Parameters</div>
-        <div class="form-stack">
-          <div class="form-group"><label>Building type</label>
-            <select id="est-type" onchange="calcCost()">
-              <option value="bungalow">Bungalow (1 floor)</option>
-              <option value="storey2">2-Storey House</option>
-              <option value="storey3">3-Storey House</option>
-              <option value="mansion">Mansion</option>
-              <option value="commercial">Commercial Building</option>
-            </select></div>
-          <div class="form-group"><label>Total floor area (m²)</label><input type="number" id="est-area" value="120" min="30" max="2000" oninput="calcCost()"/></div>
-          <div class="form-group"><label>Finishing quality</label>
-            <select id="est-quality" onchange="calcCost()">
-              <option value="basic">Basic</option><option value="standard" selected>Standard</option>
-              <option value="premium">Premium</option><option value="luxury">Luxury</option>
-            </select></div>
-          <div class="form-group"><label>Location</label>
-            <select id="est-location" onchange="calcCost()">
-              <option value="rural">Rural</option><option value="town">Town</option>
-              <option value="city" selected>City (Accra)</option><option value="upscale">Upscale Area</option>
-            </select></div>
-          <div class="form-group"><label>No. of bedrooms</label><input type="number" id="est-beds" value="3" min="0" max="12" oninput="calcCost()"/></div>
-          <div class="form-group"><label>No. of bathrooms</label><input type="number" id="est-baths" value="2" min="1" max="10" oninput="calcCost()"/></div>
+  <div class="cwrap">
+    <div class="est-layout">
+      <div>
+        <div class="card">
+          <div class="clabel">Project Parameters</div>
+          <div class="fstack">
+            <div class="fg"><label>Building type</label>
+              <select id="est-type" onchange="calcCost()">
+                <option value="bungalow">Bungalow (1 floor)</option>
+                <option value="storey2">2-Storey House</option>
+                <option value="storey3">3-Storey House</option>
+                <option value="mansion">Mansion</option>
+                <option value="commercial">Commercial Building</option>
+              </select></div>
+            <div class="fg"><label>Total floor area (m²)</label><input type="number" id="est-area" value="120" min="30" max="2000" oninput="calcCost()"/></div>
+            <div class="fg"><label>Finishing quality</label>
+              <select id="est-quality" onchange="calcCost()">
+                <option value="basic">Basic</option><option value="standard" selected>Standard</option>
+                <option value="premium">Premium</option><option value="luxury">Luxury</option>
+              </select></div>
+            <div class="fg"><label>Location</label>
+              <select id="est-location" onchange="calcCost()">
+                <option value="rural">Rural</option><option value="town">Town</option>
+                <option value="city" selected>City (Accra)</option><option value="upscale">Upscale Area</option>
+              </select></div>
+            <div class="fg"><label>No. of bedrooms</label><input type="number" id="est-beds" value="3" min="0" max="12" oninput="calcCost()"/></div>
+            <div class="fg"><label>No. of bathrooms</label><input type="number" id="est-baths" value="2" min="1" max="10" oninput="calcCost()"/></div>
+          </div>
+        </div>
+        <!-- Save as Project -->
+        <div class="card save-project-card">
+          <div class="clabel">Save as Project</div>
+          <p class="save-hint">Give this estimate a name to save it as a project. You can then log expenses against it.</p>
+          <div class="fg" style="margin-bottom:10px;"><label>Project name</label><input type="text" id="proj-name" placeholder="e.g. My East Legon Home"/></div>
+          <button class="btn-gold" onclick="saveProject()" style="width:100%;">💾 Save Project</button>
+          <div id="save-feedback" style="margin-top:8px;font-size:12px;color:var(--teal);display:none;">✓ Project saved!</div>
         </div>
       </div>
       <div>
         <div class="metrics" id="est-metrics"></div>
-        <div class="card glass-card"><div class="card-label">Cost Breakdown</div><table class="data-table" id="cost-table"></table></div>
-        <div class="card glass-card"><div class="card-label">Land Requirement</div><div id="land-info" class="info-text"></div></div>
+        <div class="card"><div class="clabel">Cost Breakdown</div><table class="dtable" id="cost-table"></table></div>
+        <div class="card"><div class="clabel">Land Requirement</div><div id="land-info" class="info-txt"></div></div>
         <div style="height:260px;position:relative;margin-top:1rem;"><canvas id="costChart"></canvas></div>
       </div>
     </div>
@@ -273,188 +176,189 @@
 </main>
 
 
-<!-- ══════════ EXPENSES ══════════ -->
-<main class="page" id="page-expenses">
-  <div class="inner-page-hero compact">
-    <div class="inner-hero-bg">
-      <img src="https://images.unsplash.com/photo-1560472355-536de3962603?w=1400&q=80&auto=format&fit=crop" alt="Finance tracking" loading="lazy"/>
-      <div class="inner-hero-overlay"></div>
-    </div>
-    <div class="inner-hero-text">
-      <div class="eyebrow">Project Finance</div>
-      <h1 class="inner-title">Expense Tracker</h1>
-      <p class="inner-sub">Every cedis accounted for. Real-time expense recording, categorisation, and analysis — powered by Firebase.</p>
-    </div>
+<!-- ══ MY PROJECTS ══ -->
+<main class="page" id="page-projects">
+  <div class="page-hero compact"><div class="ph-bg"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&q=80&auto=format&fit=crop" alt=""/><div class="ph-veil"></div></div>
+    <div class="ph-text"><div class="eyebrow">Project Manager</div><h1>My Projects</h1><p>All your saved construction projects. Click a project to view its budget breakdown and log expenses directly against it.</p></div>
   </div>
-  <div class="content-wrap">
-    <div class="card glass-card">
-      <div class="card-label">Record New Expense</div>
-      <div class="expense-form-grid">
-        <div class="form-group"><label>Description</label><input type="text" id="exp-desc" placeholder="e.g. Cement purchase — 50 bags"/></div>
-        <div class="form-group"><label>Category</label><select id="exp-cat"></select></div>
-        <div class="form-group"><label>Amount (GH₵)</label><input type="number" id="exp-amt" placeholder="0.00" min="0" step="0.01"/></div>
-        <div class="form-group"><label>Date</label><input type="date" id="exp-date"/></div>
-        <div class="form-group"><label>Notes</label><input type="text" id="exp-notes" placeholder="Supplier, invoice no., etc."/></div>
-        <div class="form-group" style="justify-content:flex-end;"><button class="btn-teal" onclick="addExpense()">+ Add Expense</button></div>
+  <div class="cwrap">
+    <div id="projects-grid" class="projects-grid"></div>
+    <div id="projects-empty" style="display:none;text-align:center;padding:3rem;color:var(--text-muted);">No projects saved yet.<br><br><button class="btn-gold-sm" onclick="switchTab('estimator',document.querySelector('[data-tab=estimator]'))">Create Your First Project</button></div>
+  </div>
+</main>
+
+
+<!-- ══ EXPENSES ══ -->
+<main class="page" id="page-expenses">
+  <div class="page-hero compact"><div class="ph-bg"><img src="https://images.unsplash.com/photo-1560472355-536de3962603?w=1400&q=80&auto=format&fit=crop" alt=""/><div class="ph-veil"></div></div>
+    <div class="ph-text"><div class="eyebrow">Project Finance</div><h1>Expense Tracker</h1><p>Record expenses against specific projects. Every cedis tracked, categorised, and synced to Firebase.</p></div>
+  </div>
+  <div class="cwrap">
+    <div class="card">
+      <div class="clabel">Record New Expense</div>
+      <div class="exp-form-grid">
+        <div class="fg"><label>Project</label><select id="exp-project"><option value="">— Select project —</option></select></div>
+        <div class="fg"><label>Description</label><input type="text" id="exp-desc" placeholder="e.g. Cement — 50 bags"/></div>
+        <div class="fg"><label>Category</label><select id="exp-cat"></select></div>
+        <div class="fg"><label>Amount (GH₵)</label><input type="number" id="exp-amt" placeholder="0.00" min="0" step="0.01"/></div>
+        <div class="fg"><label>Date</label><input type="date" id="exp-date"/></div>
+        <div class="fg"><label>Notes</label><input type="text" id="exp-notes" placeholder="Supplier, invoice, etc."/></div>
+        <div class="fg" style="justify-content:flex-end;"><button class="btn-teal" onclick="addExpense()">+ Add Expense</button></div>
       </div>
+    </div>
+    <div class="card" style="margin-bottom:1rem;">
+      <div class="clabel" style="margin-bottom:10px;">Filter by project</div>
+      <div id="project-filter-tabs" class="proj-filter-tabs"></div>
     </div>
     <div class="metrics" id="exp-metrics"></div>
-    <div class="card glass-card">
-      <div class="table-header"><div class="card-label" style="margin:0;">Transaction History</div>
+    <div class="card">
+      <div class="tbl-hdr"><div class="clabel" style="margin:0;">Transaction History</div>
         <select id="exp-filter" onchange="renderExpenseTable()" style="font-size:12px;width:auto;padding:5px 10px;"></select>
       </div>
-      <div style="overflow-x:auto;">
-        <table class="data-table exp-table">
-          <thead><tr><th>Date</th><th>Description</th><th>Category</th><th>Notes</th><th class="text-right">Amount (GH₵)</th><th></th></tr></thead>
-          <tbody id="exp-tbody"></tbody>
-        </table>
-      </div>
+      <div style="overflow-x:auto;"><table class="dtable exp-table">
+        <thead><tr><th>Date</th><th>Project</th><th>Description</th><th>Category</th><th class="tr">Amount (GH₵)</th><th></th></tr></thead>
+        <tbody id="exp-tbody"></tbody>
+      </table></div>
     </div>
     <div style="height:280px;position:relative;margin-top:1rem;"><canvas id="expChart"></canvas></div>
   </div>
 </main>
 
 
-<!-- ══════════ REPORT ══════════ -->
+<!-- ══ REPORT ══ -->
 <main class="page" id="page-report">
-  <div class="inner-page-hero compact">
-    <div class="inner-hero-bg">
-      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1400&q=80&auto=format&fit=crop" alt="Financial report" loading="lazy"/>
-      <div class="inner-hero-overlay"></div>
-    </div>
-    <div class="inner-hero-text" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;">
-      <div>
-        <div class="eyebrow">Documentation</div>
-        <h1 class="inner-title" style="margin-bottom:4px;">Project Report</h1>
-        <p class="inner-sub" style="margin:0;">Print-ready construction expense report for banks, investors, and contractors.</p>
-      </div>
+  <div class="page-hero compact"><div class="ph-bg"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1400&q=80&auto=format&fit=crop" alt=""/><div class="ph-veil"></div></div>
+    <div class="ph-text" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;">
+      <div><div class="eyebrow">Documentation</div><h1 style="margin-bottom:4px;">Project Report</h1><p style="margin:0;">Print-ready expense report per project.</p></div>
       <button class="btn-gold no-print" onclick="window.print()">🖨 Print / Save PDF</button>
     </div>
   </div>
-  <div class="content-wrap"><div class="print-area" id="print-content"></div></div>
+  <div class="cwrap">
+    <div class="card" style="margin-bottom:1rem;">
+      <div class="clabel" style="margin-bottom:10px;">Select project to report</div>
+      <div id="report-project-tabs" class="proj-filter-tabs"></div>
+    </div>
+    <div class="print-area" id="print-content"></div>
+  </div>
 </main>
 
 
-<!-- ══════════ PAINT STUDIO ══════════ -->
+<!-- ══ PAINT STUDIO ══ -->
 <main class="page" id="page-paint">
-  <div class="inner-page-hero compact">
-    <div class="inner-hero-bg">
-      <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1400&q=80&auto=format&fit=crop" alt="Interior colour design" loading="lazy"/>
-      <div class="inner-hero-overlay"></div>
-    </div>
-    <div class="inner-hero-text">
-      <div class="eyebrow">Colour &amp; Design</div>
-      <h1 class="inner-title">Paint Studio</h1>
-      <p class="inner-sub">Discover, visualise, and match paint colours for your interior and exterior spaces. Powered by colour theory and Claude AI.</p>
-    </div>
+  <div class="page-hero compact"><div class="ph-bg"><img src="https://images.unsplash.com/photo-1617103996702-96ff29b1c467?w=1400&q=80&auto=format&fit=crop" alt="Interior design"/><div class="ph-veil"></div></div>
+    <div class="ph-text"><div class="eyebrow">Colour &amp; Design</div><h1>Paint Studio</h1><p>Professional colour inspiration with realistic room photography, live visualiser, and AI colour advice.</p></div>
   </div>
-  <div class="content-wrap">
-    <div class="paint-subtabs">
-      <button class="subtab active" onclick="switchPaintTab('inspiration',this)">Inspiration</button>
-      <button class="subtab" onclick="switchPaintTab('visualizer',this)">Room Visualizer</button>
-      <button class="subtab" onclick="switchPaintTab('matcher',this)">Colour Matcher</button>
-      <button class="subtab" onclick="switchPaintTab('saved',this)">Saved Palettes</button>
+  <div class="cwrap">
+    <div class="paint-tabs">
+      <button class="ptab active" onclick="switchPaintTab('inspiration',this)">Inspiration</button>
+      <button class="ptab" onclick="switchPaintTab('visualizer',this)">Room Visualizer</button>
+      <button class="ptab" onclick="switchPaintTab('matcher',this)">Colour Matcher</button>
+      <button class="ptab" onclick="switchPaintTab('saved',this)">Saved Palettes</button>
     </div>
-    <div class="paint-panel active" id="paint-inspiration">
-      <div class="search-row">
-        <input type="text" id="pin-search" placeholder="Search: coastal, tropical, modern, earthy…" oninput="filterPins()"/>
-        <select id="pin-type-filter" onchange="filterPins()" style="width:auto;">
+
+    <!-- INSPIRATION -->
+    <div class="ppanel active" id="paint-inspiration">
+      <div class="paint-search-bar">
+        <input type="text" id="pin-search" placeholder="Search: coastal, minimalist, earthy, bold, tropical…" oninput="filterPins()"/>
+        <select id="pin-type-filter" onchange="filterPins()">
           <option value="">All spaces</option><option value="interior">Interior</option><option value="exterior">Exterior</option>
         </select>
       </div>
-      <div class="tag-row" id="paint-tags"></div>
-      <div class="pin-grid" id="pin-grid"></div>
-      <div id="pin-detail" style="display:none;margin-top:1.5rem;">
-        <div class="card glass-card">
+      <div class="paint-mood-tags" id="paint-tags"></div>
+      <div class="pin-masonry" id="pin-grid"></div>
+      <div id="pin-detail" style="display:none;margin-top:2rem;">
+        <div class="card pin-detail-card">
           <div class="pin-detail-layout">
-            <div><canvas id="pin-room-canvas" width="400" height="260" style="width:100%;border-radius:12px;"></canvas>
-              <div id="pin-color-strip" class="color-strip"></div></div>
-            <div>
-              <h2 id="pin-detail-title" class="detail-serif"></h2>
-              <div id="pin-detail-tags" style="margin:8px 0 14px;"></div>
-              <div class="card-label">Colour palette</div>
-              <div class="palette-grid" id="pin-palette"></div>
-              <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+            <div class="pin-detail-left">
+              <div class="pin-room-wrap" id="pin-room-wrap"></div>
+              <div class="pin-swatches-row" id="pin-swatches-row"></div>
+              <div class="pin-palette-grid" id="pin-palette"></div>
+            </div>
+            <div class="pin-detail-right">
+              <h2 id="pin-detail-title" class="pin-title"></h2>
+              <div id="pin-detail-tags" class="pin-tag-row"></div>
+              <div class="clabel" style="margin-top:16px;">Colour Story</div>
+              <p id="pin-story" class="pin-story-text"></p>
+              <div class="clabel" style="margin-top:16px;">Paint Codes</div>
+              <div id="pin-codes" class="pin-codes-grid"></div>
+              <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;">
                 <button class="btn-gold-sm" onclick="getPinAI()">AI colour advice ✦</button>
                 <button class="btn-ghost-sm" onclick="savePinPalette()">Save Palette</button>
               </div>
-              <div class="ai-box" id="pin-ai-box">Click "AI colour advice" for expert recommendations…</div>
+              <div class="ai-box" id="pin-ai-box">Click "AI colour advice" for expert paint recommendations calibrated to Ghana's climate…</div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="paint-panel" id="paint-visualizer">
+
+    <!-- VISUALIZER -->
+    <div class="ppanel" id="paint-visualizer">
       <div class="viz-layout">
         <div>
-          <div class="card glass-card" style="margin-bottom:10px;">
-            <div class="card-label">Room type</div><div class="room-btn-grid" id="viz-room-btns"></div>
-            <div class="card-label" style="margin-top:14px;">Paint area</div><div class="area-btn-row" id="viz-area-btns"></div>
+          <div class="card"><div class="clabel">Room type</div><div class="room-btn-grid" id="viz-room-btns"></div>
+            <div class="clabel" style="margin-top:14px;">Paint area</div><div class="area-btn-row" id="viz-area-btns"></div>
           </div>
-          <div class="card glass-card">
-            <div class="card-label">Choose colour</div>
-            <input type="color" id="viz-color-picker" value="#E8DDD0" onchange="applyVizColor()" style="width:100%;height:40px;border-radius:8px;cursor:pointer;border:1px solid var(--border);padding:3px;"/>
-            <div style="margin-top:12px;"><div class="card-label" style="margin-bottom:8px;">Quick colours</div>
-            <div class="quick-colors" id="viz-quick-colors"></div></div>
-            <div class="ai-box" id="viz-ai-box" style="margin-top:10px;">Select a colour to see AI paint notes…</div>
+          <div class="card">
+            <div class="clabel">Choose colour</div>
+            <input type="color" id="viz-color-picker" value="#E8DDD0" onchange="applyVizColor()" class="color-picker-full"/>
+            <div style="margin-top:12px;"><div class="clabel" style="margin-bottom:8px;">Quick colours</div>
+              <div class="quick-cols" id="viz-quick-colors"></div></div>
+            <div class="ai-box" id="viz-ai-box" style="margin-top:10px;">Select a colour to get AI paint notes…</div>
           </div>
         </div>
-        <div class="card glass-card">
-          <canvas id="viz-room-canvas" width="600" height="380" style="width:100%;border-radius:12px;"></canvas>
-          <div id="viz-info" class="viz-info-row"></div>
+        <div class="card">
+          <canvas id="viz-room-canvas" width="620" height="400" style="width:100%;border-radius:12px;"></canvas>
+          <div id="viz-info" class="viz-chips"></div>
         </div>
       </div>
     </div>
-    <div class="paint-panel" id="paint-matcher">
+
+    <!-- MATCHER -->
+    <div class="ppanel" id="paint-matcher">
       <div class="two-col">
-        <div class="card glass-card">
-          <div class="card-label">Input colour</div>
-          <input type="color" id="match-picker" value="#3B6D11" onchange="runMatcher()" style="width:100%;height:44px;border-radius:8px;cursor:pointer;border:1px solid var(--border);padding:3px;"/>
+        <div class="card">
+          <div class="clabel">Input colour</div>
+          <input type="color" id="match-picker" value="#3B6D11" onchange="runMatcher()" class="color-picker-full"/>
           <div style="display:flex;gap:8px;margin-top:8px;align-items:center;">
             <input type="text" id="match-hex-input" placeholder="#3B6D11" style="flex:1;" oninput="syncMatchHex()"/>
             <button class="btn-gold-sm" onclick="runMatcher()">Match</button>
           </div>
-          <div style="margin-top:14px;">
-            <div id="match-input-swatch" style="height:80px;border-radius:10px;background:#3B6D11;border:1px solid var(--border);margin-bottom:10px;"></div>
-            <div id="match-input-name" style="font-size:14px;font-weight:600;color:var(--text);"></div>
-            <div id="match-input-info" style="font-size:12px;color:var(--text-muted);line-height:1.7;margin-top:4px;"></div>
-          </div>
+          <div id="match-input-swatch" class="match-swatch" style="background:#3B6D11;"></div>
+          <div id="match-input-name" class="match-name"></div>
+          <div id="match-input-info" class="match-info"></div>
         </div>
         <div>
-          <div class="card glass-card" style="margin-bottom:10px;"><div class="card-label">Complementary</div><div class="match-results" id="match-comp"></div></div>
-          <div class="card glass-card" style="margin-bottom:10px;"><div class="card-label">Analogous</div><div class="match-results" id="match-analog"></div></div>
-          <div class="card glass-card"><div class="card-label">Triadic scheme</div><div class="match-results" id="match-triad"></div></div>
+          <div class="card"><div class="clabel">Complementary</div><div class="match-chips" id="match-comp"></div></div>
+          <div class="card"><div class="clabel">Analogous</div><div class="match-chips" id="match-analog"></div></div>
+          <div class="card"><div class="clabel">Triadic scheme</div><div class="match-chips" id="match-triad"></div></div>
         </div>
       </div>
-      <div class="card glass-card" style="margin-top:14px;">
-        <div class="card-label">AI colour harmony analysis ✦</div>
-        <div class="ai-box" id="match-ai-box">Run a match then analyse with AI…</div>
+      <div class="card" style="margin-top:14px;">
+        <div class="clabel">AI colour harmony analysis ✦</div>
+        <div class="ai-box" id="match-ai-box">Run a match then click to analyse…</div>
         <button class="btn-ghost-sm" style="margin-top:10px;" onclick="runMatchAI()">Analyse with AI</button>
       </div>
     </div>
-    <div class="paint-panel" id="paint-saved">
+
+    <!-- SAVED -->
+    <div class="ppanel" id="paint-saved">
       <div class="saved-grid" id="saved-palettes-grid"></div>
-      <div id="saved-empty" style="display:none;text-align:center;padding:3rem;color:var(--text-muted);font-size:14px;">No palettes saved yet.<br>Browse Inspiration and click "Save Palette".</div>
+      <div id="saved-empty" style="display:none;text-align:center;padding:3rem;color:var(--text-muted);">No palettes saved yet. Browse Inspiration and click "Save Palette".</div>
     </div>
   </div>
 </main>
 
-
-<!-- ══════════ FOOTER ══════════ -->
 <footer class="site-footer no-print">
   <div class="footer-inner">
-    <div class="footer-left">
-      <div class="nav-brand" style="cursor:default;">
-        <div class="brand-logo"><svg viewBox="0 0 36 36" fill="none"><path d="M18 3L33 14V33H23V23H13V33H3V14L18 3Z" fill="url(#lg2)"/><defs><linearGradient id="lg2" x1="3" y1="3" x2="33" y2="33"><stop stop-color="#C9943A"/><stop offset="1" stop-color="#F0C060"/></linearGradient></defs></svg></div>
-        <div class="brand-text"><span class="brand-name">ConstructIQ</span><span class="brand-sub">Building Excellence</span></div>
-      </div>
-      <p class="footer-desc">Ghana's professional building management platform — from blueprint to completion.</p>
+    <div class="footer-brand">
+      <svg class="brand-icon" viewBox="0 0 36 36" fill="none"><path d="M18 3L33 14V33H23V23H13V33H3V14L18 3Z" fill="url(#ng2)"/><defs><linearGradient id="ng2" x1="3" y1="3" x2="33" y2="33"><stop stop-color="#C9943A"/><stop offset="1" stop-color="#F0C060"/></linearGradient></defs></svg>
+      <div><span class="brand-name">ConstructIQ</span><span class="brand-sub">Building Excellence</span></div>
     </div>
-    <div class="footer-copy">© 2025 ConstructIQ · Built for the Ghanaian construction industry</div>
+    <div class="footer-copy">© 2025 ConstructIQ · Ghana's Professional Building Platform</div>
   </div>
 </footer>
 
-<!-- Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
@@ -463,6 +367,7 @@
 <script src="js/ai.js"></script>
 <script src="js/plans.js"></script>
 <script src="js/estimator.js"></script>
+<script src="js/projects.js"></script>
 <script src="js/expenses.js"></script>
 <script src="js/report.js"></script>
 <script src="js/paint.js"></script>
