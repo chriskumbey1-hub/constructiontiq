@@ -8,8 +8,8 @@ const PLANS = [
     tagline:"A practical two-bedroom home for young families taking their first step into homeownership.",
     desc:"Simple, well-proportioned and easy to maintain, this single-storey plan is the entry point for thousands of Ghanaian families. The layout puts two bedrooms at the rear, an open sitting and dining space at the front, and a covered veranda for evening use. Construction is straightforward, completion time is typically 12–14 months, and the footprint fits comfortably on a quarter-plot.",
     tags:["Bungalow","2-Bed","Starter"],
-    photo:"https://images.unsplash.com/photo-1598228723793-52759bba239c?w=700&q=80&auto=format&fit=crop",
-    detailPhoto:"https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1000&q=80&auto=format&fit=crop",
+    photo:"https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?w=700&q=80&auto=format&fit=crop",
+    detailPhoto:"https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?w=1000&q=80&auto=format&fit=crop",
   },
   {
     id:2, name:"The Family Bungalow", type:"bungalow",
@@ -18,8 +18,8 @@ const PLANS = [
     tagline:"Ghana's most common residential footprint — three bedrooms, compound wall, carport.",
     desc:"The Family Bungalow is the backbone of Ghanaian residential neighbourhoods from Sunyani to Tema. Three bedrooms with a master en-suite, spacious sitting room, dining area, a proper kitchen, and a covered front porch define the layout. The half-plot footprint leaves room for a compound wall, gate, and single carport. Natural cross-ventilation reduces the need for air conditioning.",
     tags:["Bungalow","3-Bed","Popular"],
-    photo:"https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=700&q=80&auto=format&fit=crop",
-    detailPhoto:"https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1000&q=80&auto=format&fit=crop",
+    photo:"https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=700&q=80&auto=format&fit=crop",
+    detailPhoto:"https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1000&q=80&auto=format&fit=crop",
   },
   {
     id:3, name:"The Compact Storey", type:"storey2",
@@ -88,8 +88,8 @@ const PLANS = [
     tagline:"A three-storey mixed-use building — retail below, offices or apartments above.",
     desc:"The Mixed-Use Block is the most common commercial investment format in Ghana's secondary cities and suburban Accra. Ground floor: two retail units ideal for pharmacy, food service, or professional offices. Upper floors: divisible into four to six office suites or two-bedroom apartments. Reinforced concrete frame, lift-ready shaft, and separate utility meters per unit maximise rental flexibility.",
     tags:["Commercial","3-Storey","Mixed-Use"],
-    photo:"https://images.unsplash.com/photo-1486325212027-8081e485255e?w=700&q=80&auto=format&fit=crop",
-    detailPhoto:"https://images.unsplash.com/photo-1577415124269-fc1140a69e91?w=1000&q=80&auto=format&fit=crop",
+    photo:"https://images.unsplash.com/photo-1582560475093-ba66accbc7f5?w=700&q=80&auto=format&fit=crop",
+    detailPhoto:"https://images.unsplash.com/photo-1582560475093-ba66accbc7f5?w=1000&q=80&auto=format&fit=crop",
   },
   {
     id:10, name:"The Tema Commercial Block", type:"commercial",
@@ -98,8 +98,8 @@ const PLANS = [
     tagline:"A four-storey commercial anchor building engineered for maximum rental yield from day one.",
     desc:"The Tema Commercial Block is engineered entirely around return on investment. Four storeys of versatile space — ground floor retail suited to banking halls, supermarkets or pharmacies; three upper floors of office suites, professional chambers or residential apartments. Passenger lift, generous car park, 24-hour security provisions, and separate utility meters for each tenancy. Consistently the highest-yielding building type in Ghana's commercial corridors.",
     tags:["Commercial","4-Storey","High-Yield"],
-    photo:"https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&q=80&auto=format&fit=crop",
-    detailPhoto:"https://images.unsplash.com/photo-1462396881884-de2c07cb95ed?w=1000&q=80&auto=format&fit=crop",
+    photo:"https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=700&q=80&auto=format&fit=crop",
+    detailPhoto:"https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1000&q=80&auto=format&fit=crop",
   },
 ];
 
