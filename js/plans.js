@@ -68,8 +68,8 @@ const PLANS = [
     tagline:"An extraordinary residence for those who have built something worth protecting and celebrating.",
     desc:"The Trasacco Executive is built for permanence. Six en-suite bedrooms, a double-volume entrance hall, formal and informal sitting rooms, a chef's kitchen with separate catering kitchen, cinema room, home gym, and a swimming pool pavilion. Staff quarters, generator house, and guard post are integral to the design. This home is built to last three generations.",
     tags:["Mansion","6-Bed","Executive"],
-    photo:"https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=700&q=80&auto=format&fit=crop",
-    detailPhoto:"https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=1000&q=80&auto=format&fit=crop",
+    photo:"https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=700&q=80&auto=format&fit=crop",
+    detailPhoto:"https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1000&q=80&auto=format&fit=crop",
   },
   {
     id:8, name:"The Airport Hills Villa", type:"mansion",
@@ -88,8 +88,8 @@ const PLANS = [
     tagline:"A three-storey mixed-use building — retail below, offices or apartments above.",
     desc:"The Mixed-Use Block is the most common commercial investment format in Ghana's secondary cities and suburban Accra. Ground floor: two retail units ideal for pharmacy, food service, or professional offices. Upper floors: divisible into four to six office suites or two-bedroom apartments. Reinforced concrete frame, lift-ready shaft, and separate utility meters per unit maximise rental flexibility.",
     tags:["Commercial","3-Storey","Mixed-Use"],
-    photo:"https://images.unsplash.com/photo-1582560475093-ba66accbc7f5?w=700&q=80&auto=format&fit=crop",
-    detailPhoto:"https://images.unsplash.com/photo-1582560475093-ba66accbc7f5?w=1000&q=80&auto=format&fit=crop",
+    photo:"https://images.unsplash.com/photo-1464082354059-27db6ce50048?w=700&q=80&auto=format&fit=crop",
+    detailPhoto:"https://images.unsplash.com/photo-1464082354059-27db6ce50048?w=1000&q=80&auto=format&fit=crop",
   },
   {
     id:10, name:"The Tema Commercial Block", type:"commercial",
